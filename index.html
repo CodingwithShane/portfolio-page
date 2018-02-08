@@ -26,13 +26,39 @@
     h2 {
       padding-top: 60px;
     }
+
+    .img-hover:hover {
+      transform: scale(2.2) rotate(25deg);
+      transition: all 1s;
+      top: 0;
+      z-index: 100;
+      display: block;
+    }
+
+    .img-hover:not(:hover) {
+      transform: scale(1) rotate(0deg);
+      transition: all 1s;
+    }
+
+    .red {
+      color: red;
+    }
+
+    #contact {
+      background-color: rgb(238, 237, 237);
+      padding-bottom: 60px;
+    }
+
+    footer {
+      background-color: rgba(238, 237, 237, 0.4);
+    }
   </style>
 </head>
 
 <body>
   <!-- Start of Nav -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Shane's Portfolio</a>
+    <a class="navbar-brand" href="#"><span class="red">{ </span>Shane's Portfolio<span class="red"> }</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -126,14 +152,8 @@
 
   <div class="active" id="portfolio">
     <div class="container">
-      <!-- <img class="img-thumbnail img-fluid mx-auto" src="http://via.placeholder.com/350x250">
-    <img class="img-thumbnail img-fluid mx-auto" src="http://via.placeholder.com/350x250">
-    <img class="img-thumbnail img-fluid mx-auto" src="http://via.placeholder.com/350x250">
-    <img class="img-thumbnail img-fluid mx-auto" src="http://via.placeholder.com/350x250">
-    <img class="img-thumbnail img-fluid" src="http://via.placeholder.com/350x250">
-    <img class="img-thumbnail img-fluid" src="http://via.placeholder.com/350x250"> -->
 
-<h2>Portfolio</h2>
+      <h2>Portfolio</h2>
       <div class="row">
 
         <div class="col-md-4">
@@ -208,10 +228,102 @@
             </div>
           </div>
         </div>
-
-
       </div>
 
+      <div id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+
+          <form action="">
+            <div>
+              <label for="first-name">First Name:
+                <input id="first-name" type="text" placeholder="John" required>
+              </label>
+
+              <label for="last-name">Last Name:
+                <input id="last-name" type="text" placeholder="Smith" required>
+              </label>
+
+            </div>
+            <div>
+              <label for="gender">Male
+                <input type="radio" name="gender" id="male"> Female
+                <input type="radio" name="gender" id="female"> Other
+                <input type="radio" name="gender" id="other">
+              </label>
+            </div>
+            <label for="email">Email</label>
+            <input type="email" value="" placeholder="your email" required>
+            <label for="password">Password</label>
+            <input type="password" value="" placeholder="your password" minlength="5" maxlength="10" required>
+            <div>
+              <label for="birthday">Birthday</label>
+              <select name="birthday" id="month">
+                <option value="month">Month</option>
+                <option value="jan">January</option>
+                <option value="feb">Feburary</option>
+              </select>
+              <select name="birthday" id="day">
+                <option value="day">Day</option>
+                <option value="mon">Monday</option>
+                <option value="tues">Tuesday</option>
+              </select>
+              <select name="birthday" id="year">
+                <option value="Year">Year</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+              </select>
+            </div>
+            <div>
+              <label for="terms">I agree to the terms and conditions</label>
+              <input type="checkbox" name="terms" required>
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+          <div class="row">
+            <div class="col-12 col-md">
+                <span class="red"><strong>{</strong> </span>Shane's Portfolio<span class="red"><strong> }</strong></span></a>
+              <small class="d-block mb-3 text-muted">&copy; 2018</small>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Social Media</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="https://github.com/CodingwithShane" target="_blank">Github</a></li>
+                <li><a class="text-muted" href="https://www.facebook.com/CodingwithShane" target="_blank">Facebook</a></li>
+                <li><a class="text-muted" href="https://twitter.com/" target="_blank">Twitter</a></li>
+                <li><a class="text-muted" href="https://www.linkedin.com/in/shane-lang-2923a44a/" target="_blank">Linkedin</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Resource</a></li>
+                <li><a class="text-muted" href="#">Resource name</a></li>
+                <li><a class="text-muted" href="#">Another resource</a></li>
+                <li><a class="text-muted" href="#">Final resource</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Team</a></li>
+                <li><a class="text-muted" href="#">Locations</a></li>
+                <li><a class="text-muted" href="#">Privacy</a></li>
+                <li><a class="text-muted" href="#">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
 </body>
 
 </html>
